@@ -1,0 +1,22 @@
+#unique{
+  color: yellow;
+}
+body P{
+  color: blue;
+}
+
+.wrapper P {
+  color: red;
+}
+
+p.special {
+  color: green;
+}
+
+p#unique {
+  color: pink;
+}
+
+#unique{
+  color: purple;
+}
