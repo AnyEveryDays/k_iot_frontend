@@ -64,7 +64,7 @@
       </div>
     </section>
 
-    <section id="tech-stacks" class="section">
+    <section id="tech-stack" class="section">
       <div class="container">
         <h3 class="section-title">기술 스택</h3>
         <!-- ★ 기술 스택은 향후 /api/public/skills 등으로 교체 가능 -->
@@ -76,7 +76,7 @@
         </ul>
       </div>
     </section>  
-    <section id="projects" class="section">
+    <section id="projects" class="section muted">
       <div class="container">
         <h3 class="section-title">프로젝트</h3>
         <!-- ★ 아래 카드는 데모용. 실제로는 /api/project 결과로 렌더링 가능 -->
@@ -107,7 +107,7 @@
     </section>  
     <section id="experiences" class="section">
       <div class="container">
-        <h3 class="section-title">교육 이수 경험</h3>
+        <h3 class="section-title">교육 이수 / 직무 경험</h3>
         <ul class="timeline">
           <li><strong>2024.06 - 2025.02</strong> | 클라우드 SaaS 기반 시니어케어 ERP 개발</li>
           <li><strong>2025.02 - 2025.08</strong> | 사물인터넷(IoT) 기반 웹 솔루션 개발</li>
@@ -116,25 +116,39 @@
     </section> 
 
 
-    <section id="contact" class="section">
+    <section id="contact" class="section muted">
       <div class="container contact">
         <div class="contact-left">
           <h3 class="section-title">문의</h3>
           <p>협업 제안, 프로젝트 의뢰, 커리어 상담 모두 환영합니다. 가능한 한 빠르게 답변드리겠습니다.</p>
           <form id="contact-form" class="form">
             <label for="email">이메일</label>
-            <input type="email" id="email" name="email"
-            placeholder="your-email@example.com" required />
+            <input type="email" id="email" name="email" placeholder="your-email@example.com" required />
 
-            <label for="message">메세지</label>
-            <textarea name="message" id="message" rows="4"
-            placeholder="프로젝트 범위/일정/예산을 간략히 적어주세요."></textarea>
-        
-            <button type="submit" class="btn primary">보내기</button>          
+            <label for="message">메시지</label>
+            <textarea name="message" id="message" rows="4" placeholder="프로젝트 범위/일정/예산을 간략히 적어주세요."></textarea>
+
+            <button type="submit" class="btn primary">보내기</button>
           </form>
         </div>
-        <div class="contact-right">
-          
+          <div class="contact-right">
+            <div class="info-banner">
+            <strong>Tip</strong>: 이력서(PDF)와 GitHub, 데모 링크는 상단 버튼 및 프로젝트 카드에서 확인하실 수 있습니다 :)
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/AnyEveryDays" target="_blank" class="social-item" aria-label="GitHub" />
+              <img src="../github-mark-white.svg" alt="GitHub 아이콘">
+              <span>GitHub</span>
+            </a>
+            <a href="https://anyeveryday.tistory.com/" target="_blank" class="social-item" aria-label="기술 블로그" />
+              <img src="../티스토리 로고.png" alt="블로그 아이콘">
+              <span>기술 블로그(티스토리)</span>
+            </a>
+            <a href="https://anyeveryday.tistory.com/" target="_blank" class="social-item" aria-label="기술 블로그" />
+              <img src="../btnG_아이콘원형.png" alt="블로그 아이콘">
+              <span>기술 블로그(네이버)</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>  
