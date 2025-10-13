@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-project</title>
+  <link rel="stylesheet" href="./mpsignup.css">
+</head>
+<script>
+
+
+  function showAlert() {
+  alert("회원 가입이 완료 되었습니다");
+}
+
+  function showAlert2() {
+  alert("회원 가입이 미완료 상태입니다");
+}
+
+</script>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">TRAV<span>PROJECT</span></h1>
+      <nav class="nav">
+        <ul class="nav-list">
+          <!-- <li><a href="#tech-stacks">기술 스택</a></li>
+          <li><a href="#projects">프로젝트</a></li>
+          <li><a href="#experiences">경험</a></li>
+          <li><a href="#contact">연락/소셜 링크</a></li> -->
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+
+
+
+
+  <div id="mainbody">
+  <h1>회원가입</h1>
+    <legend>정보를 입력해주세요</legend>
+  
+  <div class="input" >
+    아이디
+    <input type="text" class="text" placeholder="아이디" >
+  </div>
+  <div class="input">
+    비밀번호
+    <input type="text" class="text" placeholder="비밀번호">
+  </div>
+  <div class="input">
+    이메일
+    <input type="text" class="text" placeholder="email@example.com">
+  </div>   
+  <div class="input">
+    별명/닉네임
+    <input type="text" class="text" placeholder="예: 월급 루팡">
+  </div>  
+  <h3>성별</h3>
+    <div id="gender">
+      <div>
+      <input type="radio" id="MALE" name="gender" value="MALE">
+      <label for="MALE">남자</label>
+      <input type="radio" id="FEMALE" name="gender" value="interest">
+      <label for="FEMALE">여자</label>
+      </div>
+      <div class="gender-button">
+        <button onclick="showAlert()">회원 가입</button>
+        <button onclick="showAlert2()">뒤로 가기</button>
+      </div>
+    </div>
+    
+  </div>  
+
+  
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span>2025</span> Traviewer. ALL rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+
+      </div>
+    </div>
+  </footer>
+  
+</body>
+
+</html>
+
+

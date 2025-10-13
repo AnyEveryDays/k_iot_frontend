@@ -1,0 +1,100 @@
+:root{
+  /* 배경색 지정(Background) */
+  --bg: #0f172a;
+  --bg-muted: #111827;
+  --card: #111827;
+
+  /* 글자색 지정(Text) */
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+
+  /* == 주요 & 강조 색상 지정(Primary & Accent Colors) == */
+  --primary: #4f46e5;
+  --primary-contrast: #ffffff; 
+  --accent: #22c55e;
+
+  /* 상태 색상 */
+  --danger: #dc2626;
+
+  /* 테두리 & 그림자 색상 (Borders & Shadows) */
+  --outline: #374151;
+  --shadow: 0 10px 25px rgba(255, 255, 255, 0.932);
+  
+  /* 레이아웃 (Layouts) */
+  --radius: 16px;
+  --container: 1120px;
+}    
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  background-image: url(./startup-594090_1920.jpg);
+}
+
+.site-footer{
+  border-top: 1px solid rgba(255,255,255, 0.08);
+  padding: 20px 0;
+  margin-top: 32px;
+  background: rgba(0,0,0,0.2);
+}
+
+input{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#sign-up{
+  background-image: url(./hand-2586144_1920.jpg);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(8px);
+  background: rgba(148, 149, 151, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.header-inner{
+  display:flex;
+  /* 교차축 방향 정렬(기본값 stretch) */
+  align-items:center;
+  justify-content: space-between;
+  /* flex item들의 사이 간격(행/열 간격) 지정 */
+  gap: 16px;
+  min-height: 64px;
+}
+
+.logo{
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+#mainbody{
+  background-image: url(./hand-2586144_1920.jpg);
+  background-repeat: no-repeat;
+  opacity: 1;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#gender {
+  display: flex;
+  gap: 20px;       /* 버튼 사이 간격 */
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center;     /* 수직 가운데 정렬 */
+}
+
+.gender-buttons {
+  display: flex;          /* 버튼 가로 정렬 */
+  gap: 10px;
+  justify-content: center;
+}
