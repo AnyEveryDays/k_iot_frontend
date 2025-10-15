@@ -54,6 +54,7 @@ function addToCart(id, name, price, quantity){
 //? 2. 장바구니 내의 모든 상품을 조회
 function displayCart() {
   console.log('=== Cart contents ===');
+  // item은 cart를 순회하면서 전달하는 요소를 가리키는 이름 (item 보기 편하게 변경 가능)
   cart.forEach(item => {
     console.log(`${item.name} - Price: $${item.price}, Quantity: ${item.quantity}`);
     console.log(`Total: ${item.name}'s Price: $${item.price * item.quantity}`);
@@ -61,7 +62,7 @@ function displayCart() {
 }
 
 //? 3. 특정 상품의 수량을 변경
-function updateQuantity(id, quantity){
+function updateQuantity(id, quantity){ //findIndex 값 자체 반환이 아닌 위치를 반환
   const idx = cart.findIndex(item => item.id === id);
 
   // 상품이 존재하고 변경할 수량이 0보다 커야만 상품 업데이트 가능
