@@ -69,9 +69,6 @@ class student{
 }
 
 // 학생 평균 성적 계산
-
-
-
 class GradeManagement{
   constructor() {
     this.students = [];
@@ -107,8 +104,8 @@ class GradeManagement{
   getTopStudents(threshold){
     return this.getAverageScore()
       .filter(info => info.average >= threshold)
-      // .sort();  // 오름차순 정렬 - sort((a, b) => a.average - b.average)
-      .sort((a, b) => b.average - a.average);// 내림차순 정렬
+      // .sort();  // 오름차순 정렬 - sort((a, b) => a.average - b.average) 작은 -> 큰
+      .sort((a, b) => b.average - a.average);// 내림차순 정렬 큰 -> 작은
   }
 
   // 편의 출력 함수
