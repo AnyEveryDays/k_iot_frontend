@@ -6,6 +6,27 @@
   <title>event01.html</title>
 </head>
 <body>
-  
+  <!-- ! JS 이벤트 -->
+  <!-- 1) HTML 이벤트 핸들러 프로퍼티 -->
+  <h2>HTML 이벤트 핸들러 프로퍼티</h2>
+  <button id="bgChange" style="">Change Background Color</button>
+  <p id="keydown"></p>
+
+  <!-- 2) 인라인 이벤트 핸들러 -->
+  <button id="textChange" style="font-size: 20px;" 
+  onclick="textChangeColor()">
+    Change Text Color
+  </button>
+
+  <!-- 3) addEventListener 메서드 -->
+  <h2>addEventListener 메서드</h2>
+  <button class="buttonsChange">change Buttons Color</button>
+  <button class="buttonsChange">change Buttons Color</button>
+  <button class="buttonsChange">change Buttons Color</button>
+
+  <hr>
+  <p>이벤트 제거</p>
+  <button id="remove">이벤트 제거</button>
+  <script src="event01.js"></script>
 </body>
 </html>

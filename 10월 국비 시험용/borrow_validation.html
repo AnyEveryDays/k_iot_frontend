@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="card" aria-labelledby="form-title">    
+    <div class="row">
+      <div class="row-left" style="flex: 1 1 220px">
+        <label for="memberId">
+          회원번호
+          <span aria-hidden="true" class="meta">*
+            </span>
+            </label>
+              <input type="text" name="memberId" pattern="^[0-9]+$" required>
+            </div>
+            <div class="row-right" style="flex: 1 1 220px">
+              <label for="bookId"
+                >도서번호
+                <span class="meta" aria-hidden="true">*</span></label
+              >
+              <input type="text" name="bookId" pattern="^[0-9]+$" required>
+            </div>
+            <div class="row-right" style="flex: 1 1 220px">
+              <label for="bookId"
+                >회원 이름
+                <span class="meta" aria-hidden="true">*</span></label
+              >
+              <input type="text" pattern="^[가-힣]{2,10}$" required />
+
+            </div>
+            <div class="row-right" style="flex: 1 1 220px">
+              <label for="bookId"
+                >이메일
+                <span class="meta" aria-hidden="true">(선택)</span></label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                pattern="^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,}$"
+                placeholder="user@example.com"
+              />
+            </div>
+            <div class="row-right" style="flex: 1 1 220px">
+              <label for="bookId"
+                >비밀번호
+                <span class="meta" aria-hidden="true">*</span></label
+              >
+              <input type="password" name="pass" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$" required>
+            </div>
+            
+          </div>
+
+          <div class="row" style="margin-top: 12px">
+            <button class="btn" type="button" aria-disabled="true">
+              대출 요청(시연용, 비활성)
+            </button>
+          </div>
+
+          
+          
+          
+          
+        </form>
+      </section>
+</body>
+</html>
