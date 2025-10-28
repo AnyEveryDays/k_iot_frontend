@@ -1,0 +1,22 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app{
+  text-align: center;
+}
+
+#userId{
+  width: 200px;
+  padding: 10px;
+}
+
+#fetchUserData {
+  padding: 10px;
+}
+
+#userData {
+  margin-top: 20px ;
+}
