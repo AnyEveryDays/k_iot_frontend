@@ -6,7 +6,9 @@ import B_Counter from './B_React_Counter'
 import C_Component from './C_Component'
 import D_JSX from './D_JSX'
 import E_JSX from './E_JSX'
-import F_Review from './F_Review'
+import F_Review, { ExampleComponent } from './F_Review'
+import G_Props from './G_Props'
+import H_Props from './H_Props'
 
 
 const h2Style = {
@@ -39,7 +41,10 @@ function Index() {
       <h2 style={h2Style}>3. JSX(TSX): 리액트의 기본 문법</h2>
       <D_JSX />
       <E_JSX />
-      <F_Review />
+      
+      <h2 style={h2Style}>4. Props: 리액트의 데이터 전달 (부모/자식)</h2>
+      <G_Props/>
+      <H_Props/>
 
     </div>
   )
