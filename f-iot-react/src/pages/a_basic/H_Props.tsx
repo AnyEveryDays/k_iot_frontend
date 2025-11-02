@@ -3,6 +3,11 @@ import React from 'react'
 //! 자식 컴포넌트
 // : 부모로부터 사용자에 대한 데이터를 전달(props)받아 UI로 반환
 // - props 객체 형태
+// props는 상속은 아니다 그냥 자식이 부모로부터 데이터를 전달받는것
+// Java 상속 = “부모 집에서 집안 구조와 가구를 그대로 물려받음”
+
+// React props = “부모가 작은 선물 상자(데이터)를 보내줌, 자식이 받아서 쓰는 것”
+// 즉, props는 상속이 아니라 단순한 전달이라고 보는 게 맞아.
 
 type User = {
   name: string;
@@ -14,6 +19,7 @@ type UserCardProps = {user: User};
 
 // 구조 분해 할당
 const UserCard = ({ user }:UserCardProps) => {
+  // {}(<- 객체인걸 표현) 매개변수의 타입
   console.log(user.name);
   console.log(user.age);
 
