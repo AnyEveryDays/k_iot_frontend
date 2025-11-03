@@ -27,8 +27,10 @@ function App() {
 
         <Route path='/basic' element={<Basic />} />
         <Route path='/route/*' element={<RoutePages />} />
-        <Route path='/posts' element={<PostList />} />
-        <Route path='/posts/:id' element={<PostDetail />} />
+
+        <Route path='/practice/posts' element={<PostList />} />
+
+        <Route path='/practice/posts/:id' element={<PostDetail />} />
 
       </Routes>
 
