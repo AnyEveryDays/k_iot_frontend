@@ -3,6 +3,7 @@ import './App.css'
 import Basic from '@/pages/a_basic'; 
 import RoutePages from '@/pages/b_Route';
 import Navibar from './components/Navibar';
+import Hooks from '@/pages/c_hooks';
 
 import PostList from '@/pages/PostList';
 import PostDetail from './components/PostDetail';
@@ -28,9 +29,13 @@ function App() {
         <Route path='/basic' element={<Basic />} />
         <Route path='/route/*' element={<RoutePages />} />
 
+        <Route path='/hooks' element={<Hooks />} />
+
         <Route path='/practice/posts' element={<PostList />} />
 
         <Route path='/practice/posts/:id' element={<PostDetail />} />
+
+
 
       </Routes>
 
