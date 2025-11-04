@@ -31,7 +31,7 @@ function Ref01() {
   // 1) useRef: 리렌더링 사이에도 값이 유지
   //    - 값을 바꿔도 컴포넌트를 재렌더링하지 않음
   //    - 값은 항상 최신값으로 유지 (.current 값을 계속 업데이트)
-  //& 'a'의 길이값 1 유지
+  //& 1) 'a'의 길이값 1 유지
   const lengthRef = useRef<number>(0); //& 2) useRef 호출 시 {current: 0} 객체 생성 & 저장
 
   // 2) 일반 변수
@@ -61,7 +61,8 @@ function Ref01() {
 
     //& 10) ref 참조의 현재값(수정된 값)으로 출력
     console.log(lengthRef.current);
-    //& 11) 화면이 아니라 '개발자 도구 콘솔창ㄷ'에 출력
+    
+    //& 11) 화면이 아니라 '개발자 도구 콘솔창'에 출력
     // - React가 렌더링 하기 전에 JS 코드가 실행
     console.log(lengthVar);
   }
@@ -70,7 +71,7 @@ function Ref01() {
     <div>
       {/* //& 4) 현재의 초기화 값으로 2개의 p태그 모두 0의 값을 가짐 */}
       <h4>현재 텍스트 길이 측정 예제</h4>
-      <input type="text" value={text} onChange={handleInputChange} /> //# 5) 사용자의 입력
+      <input type="text" value={text} onChange={handleInputChange} /> //& 5) 사용자의 입력
       //* 15) 이전의 값 유지: 1출력
       <p>재렌더링 시에도 값이 유지되는 Ref 값: {lengthRef.current}</p>
       {/* 
