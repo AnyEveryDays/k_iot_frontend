@@ -15,11 +15,11 @@ function ToggleSection({ title, children }: ToggleSectionProps) {
   };
 
   const toggleSectionStyle: CSSProperties = {
-    margin: '10px auto',
-    padding: '10px',
-    height: '70vh',
-    backgroundColor: '#f4f4f4',
-    overflowY: "auto"
+    margin: "10px auto",
+    padding: "10px",
+    height: "70vh",
+    backgroundColor: "#f4f4f4",
+    overflowY: "auto",
   };
 
   return (
