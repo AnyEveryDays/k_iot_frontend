@@ -10,13 +10,27 @@ function PostForm() {
     body: "",
   });
 
+  const [editingId, setEditingId] = useState<string | null >(
+    localStorage.getItem('editingPostId')
+  );
+
   const { title, body } = inputValue;
+
+  // LocalStorage 값 변화를 감지
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setEditingId(localStorage.getItem('editingPostId'));
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage',handleStorageChange);
+  }, []);
 
   const storedId = localStorage.getItem("editingPostId");
 
   useEffect(() => {
     const fetchPost = async () => {
-      if (storedId) {
+      if (editingId) {
         try {
           const response = await mockApi.get(`/posts/${storedId}`);
           const post = response.data; // 응답 내부의 데이터 추출
@@ -28,11 +42,14 @@ function PostForm() {
         } catch (e) {
           console.error("게시글 조회 실패: ", e);
         }
+      } else {
+        // 새로 작성시 비워주기
+        setInputValue({title: '', body: ''})
       }
     };
 
     fetchPost();
-  }, [storedId]);
+  }, [editingId]);
 
   //^ Event Handler
   const handleInputValueChange = (
@@ -48,11 +65,12 @@ function PostForm() {
 
   const handleSubmit = async () => {
     try {
-      if (storedId) {
+      if (editingId) {
         // 수정
-        await mockApi.put(`/posts/${storedId}`, { title, body });
+        await mockApi.put(`/posts/${editingId}`, { title, body });
         alert('수정 완료');
         localStorage.removeItem('editingPostId');
+        setEditingId(null);
       } else {
         // 생성
 
@@ -77,7 +95,7 @@ function PostForm() {
 
   return (
     <div>
-      <h2>{storedId ? "게시글 수정" : "게시글 생성"}</h2>
+      <h2>{editingId ? "게시글 수정" : "게시글 생성"}</h2>
       <input
         type="text"
         name="title"
@@ -93,7 +111,7 @@ function PostForm() {
         placeholder="내용"
       />
       <br />
-      <button onClick={handleSubmit}>{storedId ? "수정하기" : "등록하기"}</button>
+      <button onClick={handleSubmit}>{editingId ? "수정하기" : "등록하기"}</button>
     </div>
   );
 }
