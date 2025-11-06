@@ -4,6 +4,7 @@ import Basic from '@/pages/a_basic';
 import RoutePages from '@/pages/b_Route';
 import Navibar from './components/Navibar';
 import Hooks from '@/pages/c_hooks';
+import HTTP from '@/pages/d_http';
 
 import PostList from '@/pages/PostList';
 import PostDetail from './components/PostDetail';
@@ -30,17 +31,17 @@ function App() {
           중첩 라우팅 사용을 위해 반드시 부모 Route의 path 끝에 /*가 필수! 
           - 중첩된 자식 라우트 인식
         */}
-        <Route path='/route/*' element={<RoutePages />} />
 
         <Route path='/basic' element={<Basic />} />
-        <Route path='/route/*' element={<RoutePages />} />
 
+        <Route path='/route/*' element={<RoutePages />} />
         <Route path='/hooks' element={<Hooks />} />
+        <Route path='/http' element={<HTTP/>} />
 
         <Route path='/practice/posts' element={<PostList />} />
         <Route path='/practice/posts/:id' element={<PostDetail />} />
-
         <Route path='/practice/search' element={<SearchApp />} />
+
 
         {/* //# pages/b_Route - Z 실습 코드 */}
         {/* 절대 경로 */}
