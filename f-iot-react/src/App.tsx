@@ -5,6 +5,7 @@ import RoutePages from '@/pages/b_Route';
 import Navibar from './components/Navibar';
 import Hooks from '@/pages/c_hooks';
 import HTTP from '@/pages/d_http';
+import GlobalState from '@/pages/e_global_state'
 
 import PostList from '@/pages/PostList';
 import PostDetail from './components/PostDetail';
@@ -37,11 +38,11 @@ function App() {
         <Route path='/route/*' element={<RoutePages />} />
         <Route path='/hooks' element={<Hooks />} />
         <Route path='/http' element={<HTTP/>} />
+        <Route path='/global-state' element={<GlobalState/>}/>
 
         <Route path='/practice/posts' element={<PostList />} />
         <Route path='/practice/posts/:id' element={<PostDetail />} />
         <Route path='/practice/search' element={<SearchApp />} />
-
 
         {/* //# pages/b_Route - Z 실습 코드 */}
         {/* 절대 경로 */}
