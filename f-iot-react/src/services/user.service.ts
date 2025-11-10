@@ -21,7 +21,8 @@ export const userService = {
     const res = await api.put(`/users/${id}`,user);
     return res.data;
   },
-  remove: async (id: number, user: Partial<User>): Promise<User> => {
+  // 반환값이 없는 Delete의 경우에는 Promise<void> <- void 가 들어간다
+  remove: async (id: number, user: Partial<User>): Promise<void> => {
     await api.delete(`/users/${id}`);
   }
 }
