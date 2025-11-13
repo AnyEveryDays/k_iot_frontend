@@ -16,6 +16,9 @@ function index() {
       <ToggleSection title="2. 모듈 CSS">
         <B_Module />
       </ToggleSection>
+      <ToggleSection title="3. Styled Components">
+        <B_Module />
+      </ToggleSection>
     </div>
   )
 }

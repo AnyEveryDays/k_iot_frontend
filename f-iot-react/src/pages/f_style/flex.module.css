@@ -16,5 +16,5 @@
 .flexColumn{
   display: flex;
   flex-direction: column;
-  gap: var(--spcae-sm);
+  gap: var(--space-sm);
 }
