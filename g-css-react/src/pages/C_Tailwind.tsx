@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 import { color } from 'chart.js/helpers'
 import React from 'react'
 import './tailwind.css'
@@ -17,6 +19,26 @@ import './tailwind.css'
 // 2) CSS 파일 거의 없음
 // : 따로 파일 생성 필요 X (클래스명 충돌 가능성 고민 X)
 
+// 3) 반응형 편리함
+
+// 4) 디자인 시스템 운영 쉬움
+// : 팀 간 UI 스타일 일관성 보장
+// : 모든 spacing/color/font가 scale 기반
+
+// 5) 확장성 높음
+
+// : tailwind.config.js(커스텀 가능)
+
+//# 단점
+// 1) HTML/JSX 클래스가 길어짐
+// : 코드 가독성 저하
+
+// 2) 익숙해질 때까지 시간이 필요
+// : tailwind 규칙 암기에 시간이 오래 걸림
+
+// 3) 디자인 설계 없이는 똑같은 UI만 복사
+// : 디자인 시스템 없이 사용하면 'tailwind를 사용한 일반 CSS와 다름없음'
+
 const buttonStyle = {
   padding: '4px',
   background: 'blue',
@@ -31,7 +53,9 @@ function C_Tailwind() {
     <div>
       <button style={buttonStyle}>객체로 스타일 지정하는 버튼</button>
       <button className='button'>클래스로 지정하는 버튼</button>
-      {/* <button class='p-4 bg-blue-500 text-white rounded-lg'>tailwind CSS 적용한 버튼</button> */}
+      <button className='p-4 bg-blue-500 text-white rounded-lg'>tailwind CSS 적용한 버튼</button>
+
+      <div className='text-sm md:text-base lg:text-xl'>한 요소에서 모든 반응형 처리 가능</div>
     </div>
   )
 }
